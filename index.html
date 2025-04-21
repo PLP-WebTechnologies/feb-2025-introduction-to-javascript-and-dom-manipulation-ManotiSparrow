@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sparrow Manoti | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="light-theme">
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Contents</h2>
+      <ul>
+        <li><button onclick="showSection('home')">🏠 Home</button></li>
+        <li><button onclick="showSection('articles')">📚 Articles</button></li>
+        <li><button onclick="showSection('contact')">📞 Contact</button></li>
+      </ul>
+      <hr />
+      <button onclick="toggleTheme()">🌓 Change Theme</button>
+    </aside>
+
+    <main class="main-content">
+      <section id="home" class="content-section">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Hello! I'm Sparrow Manoti, a passionate web developer focused on building beautiful and functional digital experiences.</p>
+        <img src="image.jpg" alt="Sparrow Manoti" class="profile-image" width="300" height="200" />
+        
+        <h2>🎯 My Favorite Things</h2>
+        <ul id="favorites">
+          <li>Coding</li>
+          <li>Music</li>
+        </ul>
+
+        <div class="action-bar">
+          <label for="item-select">Choose a hobby to add:</label>
+          <select id="item-select">
+            <option value="Reading">Reading</option>
+            <option value="Gaming">Gaming</option>
+            <option value="Cooking">Cooking</option>
+            <option value="Photography">Photography</option>
+            <option value="Traveling">Traveling</option>
+          </select>
+
+          <button onclick="addItem()">Add Item</button>
+          <button onclick="removeItem()">Remove Last</button>
+        </div>
+      </section>
+
+      <section id="articles" class="content-section hidden">
+        <h1>📝 Articles</h1>
+        <article>
+          <h2>The Power of Consistency</h2>
+          <p>Success in any field often comes down to consistency. Whether you're coding, writing, or training, showing up daily leads to mastery. Consistency builds habits, and habits form the foundation for excellence. It's not about perfection, but about persistence. Even on days when motivation is low, sticking to a routine pays off. Small efforts compound over time. They build resilience and discipline. You learn more from repetition than from intensity. Progress might seem slow, but it's steady. Trust the process.</p>
+        </article>
+
+        <article>
+          <h2>Why I Love Front-End Development</h2>
+          <p>Front-end development combines logic with creativity. It allows you to bring ideas to life visually while solving real problems. Seeing a design come to life in a browser is exciting. HTML, CSS, and JavaScript give you tools to create amazing user experiences. There's always something new to learn, from animations to responsive design. Frameworks enhance what you can do, but the core remains the same. It's rewarding to watch users interact with something you built. It connects creativity with code. It's an art and science blend. And it never gets boring.</p>
+        </article>
+      </section>
+
+      <section id="contact" class="content-section hidden">
+        <h1>📬 Contact Me</h1>
+        <p>If you'd like to work together or just say hi, feel free to reach out!</p>
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" placeholder="Your name" />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" placeholder="Your email" />
+
+          <label for="message">Message:</label>
+          <textarea id="message" rows="5" placeholder="Your message"></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
